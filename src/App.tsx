@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { useState } from 'react';
 import { supabase } from './client';
+import Board from './Board/Board';
 
 interface Customer {
   id: number,
@@ -27,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">jobGopher</header>
+      <Board />
     </div>
   );
 }
