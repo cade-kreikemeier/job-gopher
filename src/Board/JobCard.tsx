@@ -11,8 +11,10 @@ function JobCard({ job }: JobCardProps) {
 
   return (
     <div className="JobCard">
-      <span className="JobNumber">{`J${job.id.toString().padStart(4, '0')}`}</span>
-      <span className="DueDate">{dueDate}</span>
+      <div className="CardHeader">
+        <span className="JobNumber">{`j${job.id.toString().padStart(4, '0')}`}</span>
+        <span className="DueDate">due {dueDate}</span>
+      </div>
       <span className="CustomerName">{job.customers.name}</span>
     </div>
   );

@@ -1,6 +1,42 @@
 .JobCard {
   background-color: #CCC5B9;
   height: 7.5rem;
-  width: 16.25rem;
+  width: 22.5rem;
   border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.CardHeader{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.JobNumber {
+  flex: 1;
+  display: flex;
+  font-size: 2.25rem;
+  padding-left: .8rem;
+  padding-top: .5rem;
+}
+
+.DueDate {
+  flex: auto;
+  display: flex;
+  font-size: 1.5rem;
+  padding-top: .5rem;
+  padding-right: .8rem;
+  margin-left: auto;
+  justify-content: right;
+}
+
+.CustomerName { 
+  flex: 1;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: .5rem;
 }
