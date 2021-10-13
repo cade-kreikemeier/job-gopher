@@ -1,6 +1,6 @@
 export interface Customer {
-  id: number,
-  created_at: string,
+  id?: number,
+  created_at?: string,
   name: string
 };
 
@@ -9,6 +9,7 @@ export interface Job {
   created_at: string,
   customer_id: number,
   customer_po: string,
+  customers: Customer,
   part_number: string,
   part_name: string,
   part_rev: string,
@@ -16,13 +17,14 @@ export interface Job {
   drawing_rev: string,
   quantity: number,
   material_id: number,
+  materials?: Material,
   current_process: number,
   processes: number[],
   due_date: string
 };
 
 export interface Material {
-  id: number,
+  id?: number,
   material_name: string
 };
 
