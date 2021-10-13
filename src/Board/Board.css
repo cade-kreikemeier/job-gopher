@@ -1,4 +1,7 @@
-Board {
+.Board {
+  background-color: #403D39;
+  height: calc(100vh - 4.825rem);
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }

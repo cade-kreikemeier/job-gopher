@@ -1,4 +1,5 @@
 import React from "react";
+import './Columb.css';
 import { Job, Process } from "../models/interfaces";
 
 
