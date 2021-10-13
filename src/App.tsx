@@ -22,7 +22,11 @@ function App() {
   async function fetchJobs() {
     const { data } = await supabase
       .from<Job>('jobs')
-      .select();
+      .select(`
+        *,
+        customers(name),
+        materials(material_name)
+      `);
     setJobs(data);
     console.log('jobs: ', data);
   };
