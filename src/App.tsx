@@ -57,6 +57,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">jobGopher</header>
+      <div className="ToolBar"><button className="AddJobBtn">Job+</button></div>
       <Board jobs={jobs} processes={processes} />
     </div>
   );

@@ -12,3 +12,23 @@
   font-size: 3.5rem;
   color: #000;
 }
+
+.ToolBar {
+  height: 3.5rem;
+  background-color: #CCC5B9;
+  display: flex;
+  justify-content: end;
+}
+
+.AddJobBtn {
+  height: 3rem;
+  width: 10rem;
+  margin: auto 1.5rem;
+  color: #FFFCF2;
+  background-color: #252422;
+  font-family: 'Poppins';
+  font-size: 1.75rem;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
