@@ -1,6 +1,7 @@
 import React from "react";
 import './Columb.css';
 import { Job, Process } from "../models/interfaces";
+import JobCard from "./JobCard";
 
 
 interface ColumbProps {
@@ -10,12 +11,15 @@ interface ColumbProps {
 
 function Columb({ jobs, process }: ColumbProps) {
   return (
-    <div className="Columb">
+    <>
       {jobs && process
-        ? <div className="ColumbTitle">{process.process_name}</div>
+        ? <div className="Columb">
+          <div className="ColumbTitle">{process.process_name}</div>
+          {jobs.map((job) => <JobCard key={job.id} job={job} />)}
+        </div>
         : null
       }
-    </div>
+    </>
   );
 };
 

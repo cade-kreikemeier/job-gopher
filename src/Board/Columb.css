@@ -4,6 +4,7 @@
   width: 22.5rem;
   background-color: #FFFCF2; /*remove when done */
   border-radius: 1.5rem; /*remove when done */
+  align-items: center;
 }
 
 .ColumbTitle {
