@@ -3,13 +3,19 @@ import './App.css';
 import { useState } from 'react';
 import { supabase } from './client';
 import Board from './Board/Board';
+import NewJobForm from './NewJobForm/NewJobForm';
 import { Customer, Job, Material, Process } from './models/interfaces';
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
   const [customers, setCustomers] = useState<Customer[] | null>([]);
   const [jobs, setJobs] = useState<Job[] | null>([]);
   const [materials, setMaterials] = useState<Material[] | null>([]);
   const [processes, setProcesses] = useState<Process[] | null>([]);
+
+  function toggleFormView() {
+    setShowForm(!showForm);
+  }
 
   async function fetchCustomers() {
     const { data } = await supabase
@@ -56,8 +62,11 @@ function App() {
 
   return (
     <div className="App">
+      {showForm ? <NewJobForm toggleForm={toggleFormView} /> : null}
       <header className="App-header">jobGopher</header>
-      <div className="ToolBar"><button className="AddJobBtn">Job+</button></div>
+      <div className="ToolBar">
+        <button className="AddJobBtn" onClick={toggleFormView}>Job+</button>
+      </div>
       <Board jobs={jobs} processes={processes} />
     </div>
   );
